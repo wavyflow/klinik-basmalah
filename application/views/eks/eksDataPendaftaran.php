@@ -1,11 +1,3 @@
-<?php 
-if(empty($tanggal)){
-    $tgl = $tanggal;
-} else {
-    $tgl = null;
-}
-?>
-
 <html><head>
 <style>
 h1,h2 {text-align: center;}
@@ -19,9 +11,9 @@ table, th, td {
   padding: 10px
 }
 </style>
-<title><?= $title ?></title>
+<title>Data Pendaftar</title>
 </head><body>
-<h1><?= $title; $tgl ?></h1>
+<h1>Data Pendaftar</h1>
 <h2>Klinik Basmalah</h2>
 <p>Jalan Nasional No. 3 Krajan, RT.02/RW.03, Krajan, Gendaran, Kec. Donorojo, Kabupaten Pacitan, Jawa Timur 63554</p>
 <hr>
