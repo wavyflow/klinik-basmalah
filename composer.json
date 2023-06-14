@@ -1,0 +1,15 @@
+{
+    "name": "dompdf/dompdf",
+    "autoload": {
+        "psr-4": {
+            "Dompdf\\Dompdf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "herocyber",
+            "email": "herocyber00@gmail.com"
+        }
+    ],
+    "require": {}
+}
