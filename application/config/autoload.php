@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'form_validation', 'session','Dompdf_gen');
+$autoload['libraries'] = array('database', 'form_validation', 'session','dompdf_gen');
 
 /*
 | -------------------------------------------------------------------
