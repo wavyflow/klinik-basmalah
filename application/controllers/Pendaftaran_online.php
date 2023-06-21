@@ -9,7 +9,7 @@ class Pendaftaran_online extends CI_Controller {
         $this->load->model('poli_model');
         $this->load->model('dokter_model');
         $this->load->model('antrian_model');
-		is_logged_in();
+		// is_logged_in();
 	}
 	public function index()
 	{
