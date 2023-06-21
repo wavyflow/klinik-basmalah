@@ -26,12 +26,12 @@
         <span>Pendaftaran</span>
     </a>
 </li>
-<li class="nav-item">
+<!-- <li class="nav-item">
     <a class="nav-link" href="<?=base_url('pendaftaran_online/daftar')?>">
         <i class="fas fa-fw fa-user-plus"></i>
         <span>Pendaftaran Online</span>
     </a>
-</li>
+</li> -->
 <li class="nav-item">
     <a class="nav-link" href="<?=base_url('pendaftaran_online')?>">
         <i class="fas fa-fw fa-th-list"></i>
