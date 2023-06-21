@@ -24,4 +24,19 @@ class Pasien_model extends CI_Model {
         $this->db->where('jml_kunjungan >', 1);
         return $this->db->get('tbpasien');
     }
+
+	public function getLastId()
+	{
+		$this->db->select('no_rm');
+		$this->db->order_by('no_rm', 'DESC');
+		$this->db->limit(1);
+		$query = $this->db->get('tbpasien'); // Ganti 'nama_tabel' dengan nama tabel yang Anda buat
+
+		if ($query->num_rows() > 0) {
+			$row = $query->row();
+			return $row->no_rm;
+		} else {
+			return 'RM000'; // Jika belum ada data, mulai dari RM000
+		}
+	}
 }

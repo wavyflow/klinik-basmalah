@@ -67,21 +67,26 @@ class Data_pasien extends CI_Controller {
 			$this->load->view('dataPasien');
 			$this->load->view('templates/footer');
 		}else{
-			$jumlah = $this->pasien_model->get_pasien(); //Ambil Data
-			$row = $jumlah->num_rows(); // Ambil Jumlah Data
-			if($row > 0){ // Dicek apakah data kosong jika tidak id otomatis "RM-001"
-				foreach($jumlah->result_array() as $a){
-					$lastId = $a['no_rm'];//PK diambil lalu dimasukan ke variable lastId
-				}
+			// $jumlah = $this->pasien_model->get_pasien(); //Ambil Data
+			// $row = $jumlah->num_rows(); // Ambil Jumlah Data
+			// if($row > 0){ // Dicek apakah data kosong jika tidak id otomatis "RM-001"
+			// 	foreach($jumlah->result_array() as $a){
+			// 		$lastId = $a['no_rm'];//PK diambil lalu dimasukan ke variable lastId
+			// 	}
 
-				$lastNum = substr($lastId,3);//mengambil angka terakhir
+			// 	$lastNum = substr($lastId,3);//mengambil angka terakhir
 
-				$nextID = str_pad($lastNum+1,3, 0 ,STR_PAD_LEFT);//menambahkan angka yang baru diambil dari variable $lastNum
+			// 	$nextID = str_pad($lastNum+1,3, 0 ,STR_PAD_LEFT);//menambahkan angka yang baru diambil dari variable $lastNum
 
-				$id = "RM-".$nextID;//angka digabungkan dengan "RM-"
-			} else {
-				$id = "RM-001";
-			}
+			// 	$id = "RM-".$nextID;//angka digabungkan dengan "RM-"
+			// } else {
+			// 	$id = "RM-001";
+			// }
+
+			$last_id = $this->pasien_model->getLastId();
+			$last_number = intval(substr($last_id, 3)); // Mengambil angka dari ID terakhir
+			$next_number = $last_number + 1; // Menaikkan angka
+			$id = 'RM-' . str_pad($next_number, 3, '0', STR_PAD_LEFT); // Membentuk ID berikutnya
 
 			$data = array(
 				'no_rm' 		=> $id,
