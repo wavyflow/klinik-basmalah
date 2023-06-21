@@ -38,7 +38,7 @@ CREATE TABLE `tbadmin` (
 --
 
 INSERT INTO `tbadmin` (`id_admin`, `username`, `password`) VALUES
-(1, 'admin', '$2y$10$7NIc7YfQ0oswHHWrbqD.GOiNB3oVKnrvcdooi/GlaxkHo3p2PmUwG');
+(1, 'admin', '$2y$10$8QOD2tk/ERG5GsEQyYx5FuLQnLPySO0oxqAlMJSGpK65XFYV7n2Hm');
 
 -- --------------------------------------------------------
 
